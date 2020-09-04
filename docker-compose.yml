@@ -1,0 +1,17 @@
+version: '3.3'
+
+services:
+    httpd:
+        build: ./docker/httpd
+        ports:
+            - 80:80
+            # - 443:443
+        links:
+            - tomcat:tomcat
+    tomcat:
+        build: ./docker/tomcat
+        ports:
+            - 8009:8009
+        tty: true
+
+
