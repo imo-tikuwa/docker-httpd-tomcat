@@ -22,3 +22,5 @@ RUN mv /usr/local/tomcat/conf/server.xml /usr/local/tomcat/conf/server.xml.org
 COPY ./server.xml /usr/local/tomcat/conf/server.xml
 
 EXPOSE 8009
+
+CMD ["/usr/local/tomcat/bin/catalina.sh", "run"]

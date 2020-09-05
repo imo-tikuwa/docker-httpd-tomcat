@@ -96,7 +96,7 @@
                address="0.0.0.0"
                port="8009"
                redirectPort="8443"
-               secretRequired="false"
+               secret="9DYmSMyRpfGD"
                useBodyEncodingForURI="true"
                URIEncoding="UTF-8"
                maxHttpHeaderSize="65536" />
