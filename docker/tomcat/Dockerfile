@@ -20,3 +20,5 @@ RUN ln -s $TOMCAT_ARCHIVE tomcat
 # 設定ファイルのオーバーライド
 RUN mv /usr/local/tomcat/conf/server.xml /usr/local/tomcat/conf/server.xml.org
 COPY ./server.xml /usr/local/tomcat/conf/server.xml
+
+EXPOSE 8009
