@@ -3,9 +3,9 @@ FROM alpine:3.10
 ARG TOMCAT_VERSION=7.0.105
 ARG TOMCAT_ARCHIVE=apache-tomcat-${TOMCAT_VERSION}
 
-RUN echo -e "\n\
-alias ll='ls -l --color=auto'\n\
-" >> /root/.bashrc
+RUN { \
+        echo "alias ll='ls -l --color=auto'"; \
+    } >> /root/.bashrc
 
 RUN apk update \
     && apk --no-cache add curl openjdk11-jre-headless \

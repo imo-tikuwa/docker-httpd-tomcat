@@ -10,10 +10,12 @@ services:
             # - 443:443
         links:
             - tomcat:tomcat
+        privileged: true
     tomcat:
         build: ./docker/tomcat
-        ports:
-            - 8009:8009
+        expose:
+            - '8009'
         tty: true
+        privileged: true
 
 

@@ -1,8 +1,8 @@
 FROM httpd:2.4.46
 
-RUN echo -e "\n\
-alias ll='ls -l --color=auto'\n\
-" >> /root/.bashrc
+RUN { \
+        echo "alias ll='ls -l --color=auto'"; \
+    } >> /root/.bashrc
 
 RUN ["apt-get", "update"]
 
