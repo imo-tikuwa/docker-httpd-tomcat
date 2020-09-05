@@ -3,6 +3,8 @@ version: '3.3'
 services:
     httpd:
         build: ./docker/httpd
+        # volumes:
+        #     - ./docker/httpd/httpd-tomcat.conf:/usr/local/apache2/conf/extra/httpd-tomcat.conf
         ports:
             - 80:80
             # - 443:443
